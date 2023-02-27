@@ -1,7 +1,7 @@
 import {action, makeObservable, observable} from "mobx";
 import generate_password from "./generate_password";
 
-export class password {
+export class Password {
     password_value: string;
     password_length: number;
     has_upper: boolean;
