@@ -21,6 +21,11 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
 
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build"
+          body: "Auto build"
+
       - name: archive artifacts
         uses: actions/upload-artifact@v3
         with:
