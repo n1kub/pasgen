@@ -19,4 +19,10 @@ jobs:
       - name: Build production bundle
         uses: borales/actions-yarn@v4
         with:
-          cmd: build # will run `yarn build:prod` command
+          cmd: build # will run `yarn build` command
+
+      - name: archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: static
+          path: build
