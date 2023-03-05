@@ -2,8 +2,9 @@ const generate_password = async (with_special_symbols: boolean, has_upper: boole
     if (!password_to_modify) {
         password_to_modify = ""
     }
-    const result = await fetch("http://localhost:8080/", {
-        method: "GET",
+    console.log(password_length, password_to_modify, has_upper, with_special_symbols)
+    const result = await fetch("http://localhost:8080/password", {
+        method: "POST",
         body: JSON.stringify({
             password_length: password_length,
             with_special_symbols: with_special_symbols,
